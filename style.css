@@ -1,0 +1,577 @@
+* {
+    margin: 0;
+    padding: 0;
+    border: none;
+    outline: none;
+    position: relative;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+    scroll-behavior: smooth;
+}
+
+body {
+    max-width: 100svw;
+    height: 100svh;
+    min-width: 320px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 30px;
+    background-color: rgb(1, 9, 19);
+    color: white;
+}
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 3px;
+}
+.logo span {
+    font-weight: bold;
+    color: rgb(122, 86, 214);
+}
+nav {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+nav ul {
+    display: flex;
+    gap: 12px;
+}
+nav ul li a {
+    color: white;
+    padding: 10px 0px;
+    transition: all;
+    transition-duration: 0.4s;
+}
+
+nav ul li a:hover {
+    color:rgb(122, 86, 214);
+    border-bottom:2px solid rgb(122, 86, 214) ;
+}
+
+nav button {
+    background-color: transparent;
+}
+
+nav button a{
+    padding: 10px 15px;
+    border: 1px solid rgb(122, 86, 214);
+    color: rgb(122, 86, 214);
+    background-color: transparent;
+    border-radius: 15px;
+    transition: all;
+    transition-duration: 0.4s;
+}
+
+nav button a:hover {
+    background-color: rgb(122, 86, 214);
+    color: white;
+    box-shadow: 1px 1px 2px 5px rgba(96, 69, 164, 0.515);
+    transform: scale(1.09);
+}
+
+main {
+    display: flex;
+    justify-content: space-between;
+    padding: 40px 120px;
+    align-items: center;
+    background-color: rgb(6, 13, 33);
+    color: white;
+    height: 80svh;
+}
+
+.main-info {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+}
+
+.social-media {
+    display: flex;
+    gap: 10px;
+    font-size: 30px;
+    padding: 35px 0;
+}
+
+.social-media a {
+    color: white;
+    transition: all;
+    transition-duration: 0.4s;
+}
+
+.social-media a:hover {
+    color:rgb(122, 86, 214) ;
+}
+
+.main-info span {
+    color:rgb(122, 86, 214) ;
+}
+
+.main-info .p1 {
+    font-size: 18px;
+}
+
+.main-info h1 {
+    font-size: 50px;
+}
+
+.main-info h4 {
+    font-size: 23px;
+}
+
+.main-info .p2 ,.about-info div p ,.card p{
+    color: rgb(104, 109, 125);
+    font-size: 0.9em;
+    text-wrap: wrap;
+}
+
+main img {
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    box-shadow: 1px 1px 15px 16px rgba(96, 69, 164, 0.356);
+    animation-name: img-move;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+.main-buttons {
+    display: flex;
+    gap: 15px;
+}
+
+.main-buttons button ,.about-info button {
+    background-color: transparent;
+}
+
+.main-buttons .view-work a {
+    padding: 10px 15px;
+    border: 1px solid rgb(122, 86, 214);
+    color: white;
+    background-color: rgb(122, 86, 214);
+    border-radius: 15px;
+    transition: all;
+    transition-duration: 0.4s;
+}
+
+.main-buttons .Contact-but a ,.about-info a{
+    padding: 10px 15px;
+    border: 1px solid rgb(122, 86, 214);
+    color: rgb(122, 86, 214);
+    background-color: transparent;
+    border-radius: 15px;
+    transition: all;
+    transition-duration: 0.4s;
+}
+
+.main-buttons .Contact-but a:hover , .about-info a:hover{
+    background-color: rgb(122, 86, 214);
+    color: white;
+    box-shadow: 1px 1px 2px 5px rgba(96, 69, 164, 0.515);
+    transform: scale(1.09);
+}
+
+.about {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 40px 50px;
+    gap: 100px;
+    align-items: center;
+    background-color: rgb(1, 9, 19);
+}
+
+.about img {
+    min-width: 200px;
+    height: 300px;
+    border-radius: 10px;
+    box-shadow: 1px 1px 13px 9px rgba(16, 35, 87, 0.588);
+}
+.about-cointiner {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 150px;
+    padding: 30px;
+    width: 100%;
+    border-radius: 10px;
+    background-color: rgb(6, 13, 33);
+}
+
+.about-info{
+    color: white;
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+.about-info div {
+    display: flex;
+    flex-direction: column;
+}
+.about-info h3 {
+    border-bottom: 2px solid rgb(122, 86, 214);
+    width: fit-content;
+    padding-bottom: 10px;
+}
+.skills {
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 40px;
+    align-items: center;
+}
+
+.skills-top {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+.skills-top-child {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
+}
+
+.skills-top h3 {
+    color: rgb(122, 86, 214);
+    font-size: 20px;
+}
+.skills-top p {
+    font-size: 18px;
+}
+
+.skills-bottom {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.skills-bottom h2 {
+    border-bottom: 2px solid rgb(122, 86, 214);
+    width: fit-content;
+    padding-bottom: 10px;
+}
+
+.technologies div {
+    width: 100px;
+    height: 100px;
+    border: 1px solid rgb(122, 86, 214);
+    border-radius: 7px;
+    padding: 10px;
+    background-color: transparent;
+    display: flex;
+    flex-direction: column;
+    align-items:center;
+    transition-property: all;
+    transition-duration:0.4s ;
+}
+
+.technologies div:hover {
+    background-color: rgb(122, 86, 214);
+    color: white;
+    box-shadow: 1px 1px 2px 5px rgba(96, 69, 164, 0.515);
+    transform: scale(1.09);
+}
+
+.skills-bottom .technologies {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+.about .sperator {
+    width: 2px;
+    background-color: rgba(255, 246, 235, 0.229);
+}
+.about-info div {
+    width: 300px;
+}
+
+.about-info div h3{
+    font-size: 25px;
+}
+
+.skills i {
+    font-size: 30px;
+}
+
+.my-projects {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    background-color: rgb(1, 9, 19);
+    color: white;
+}
+
+.my-projects h2 {
+    padding: 10px;
+    border-bottom: 2px solid rgb(122, 86, 214);
+}
+
+.projects-cointiner{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 20px;
+    background-color: rgb(6, 13, 33);
+    justify-content: center;
+    border-radius: 15px;
+}
+
+.card {
+    padding: 5px;
+    display: flex;
+    width: 300px;
+    height: 300px;
+    flex-direction:column;
+    gap: 6px;
+    color: white;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid rgb(122, 86, 214);
+    border-radius: 15px;
+}
+
+.card:hover {
+    transform: translateY(-4px);
+    transform: scale(1.02);
+    transition: all;
+    transition-duration: 0.4s;
+}
+
+.card img {
+    width:250px;
+    border-radius: 10px;
+}
+
+.card .HC {
+    display: flex;
+    gap: 10px;
+}
+
+.card .HC div {
+    padding: 5px;
+    border: 1px solid rgb(122, 86, 214);
+    border-radius: 5px;
+    background-color: transparent;
+    color: rgb(122, 86, 214);
+}
+
+.card button {
+    background-color: transparent;
+}
+
+.card button a {
+    padding: 10px 15px;
+    border: 1px solid rgb(122, 86, 214);
+    color: rgb(122, 86, 214);
+    background-color: transparent;
+    border-radius: 15px;
+    transition: all;
+    transition-duration: 0.4s;
+}
+
+.card button a:hover {
+    background-color: rgb(122, 86, 214);
+    color: white;
+    box-shadow: 1px 1px 2px 5px rgba(96, 69, 164, 0.515);
+    transform: scale(1.09);
+}
+
+form {
+    padding: 20px ;
+    width: 40%;
+    border: 1px solid rgb(122, 86, 214);
+    border-radius: 20px;
+}
+
+input , form textarea{
+    width: 100%;
+    border: 1px solid rgb(122, 86, 214);
+    background-color:rgb(1, 9, 19);
+    color: white;
+    box-shadow: 1px 1px 5px rgba(202, 201, 201, 0.223);
+    padding: 15px;
+    transition: all;
+    border-radius: 10px;
+    transition-duration:0.4s;
+}
+
+.messaage {
+    height: 100px;
+}
+
+input:focus {
+    box-shadow: 1px 1px 2px 5px rgba(96, 69, 164, 0.515);
+    transform: scale(1.02);
+}
+form button {
+    padding: 10px 30px;
+    background-color: rgb(122, 86, 214);
+    color: white;
+    font-weight: bold;
+    border-radius: 10px;
+    cursor: pointer;
+    transition-property: all;
+    transition-duration: 0.2s;
+}
+
+form button:hover {
+    background-color: rgb(96, 47, 219);
+    transform: translateY(-1px);
+}
+
+.contact-me-cointainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 50px;
+    gap: 200px;
+}
+
+.contact-me img {
+    min-width: 170px;
+    height: 60svh;
+    border-radius: 10px;
+    box-shadow: 1px 1px 13px 9px rgba(16, 35, 87, 0.588);
+}
+
+.contact-me {
+    background-color: rgb(6, 13, 33);
+    height: 80svh;
+}
+.contact-me h2{
+    color: white;
+    padding: 10px;
+    border-bottom: 2px solid rgb(122, 86, 214);
+    text-align: center;
+}
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: rgb(1, 9, 19);
+    color: white;
+    font-weight: bole;
+    font-size: 20px;
+}
+
+footer span {
+    color: rgb(122, 86, 214);
+}
+
+::selection{
+    background-color: rgb(122, 86, 214);
+    color: white;
+}
+
+@keyframes img-move {
+    from{
+        transform: translateY(0px);
+        box-shadow: 1px 1px 15px 16px rgba(96, 69, 164, 0.356);
+    }
+    to {
+        transform: translateY(25px);
+        box-shadow: 1px 1px 15px 16px rgba(96, 69, 164, 0.215);
+    }
+}
+
+@media(max-width:1210px){
+    main { 
+        gap: 30px;
+    }
+    .sperator {
+        display: none;
+    }
+
+    .about-cointiner{
+        justify-content: center;
+        gap: 100px;
+    }
+
+    .contact-me {
+        height: 90svh;
+    }
+
+    .contact-me img {
+        display: none;
+    }
+    form {
+        width: 100%;
+    }
+}
+@media(max-width:760px){
+    nav ul {
+        display: none;
+    }
+    main {
+        padding: 20px 25px;;
+    }
+    .main-info{
+        width: 100%;
+    }
+    main img {
+        display: none;
+    }
+    .about img{
+        display: none;
+    }
+    .sperator{
+        display: none;
+    }
+    .about-info div p {
+        width: 180px;
+    }
+    .about-info div{
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+    .about-cointiner {
+        justify-content: center;
+    }
+    
+    .skills {
+        width: 180px;
+    }
+    .card {
+        width: 260px;
+    }
+
+    .contact-me {
+        height: 85svh;
+    }
+
+    .main-buttons {
+        gap: 3px;
+    }
+    .contact-me img {
+        display: none;
+    }
+    form {
+        width: 100%;
+    }
+}
+
+@media(min-width:760px) {
+    main {
+        justify-content: space-between;
+        padding: 40px 50px;
+    }
+}
+
+@media(min-width:1020px){
+    main{
+        padding: 40px 120px;
+    }
+}
